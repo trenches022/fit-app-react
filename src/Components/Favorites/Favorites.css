@@ -1,0 +1,25 @@
+.favorites-btn {
+  width: 50%;
+  padding: 5px;
+  background-color: #0f6b2b;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.favorites-btn:hover {
+  background-color: #0b4d1f;
+}
+
+.favorites-btn.added {
+  background-color: #b22222;
+}
+
+.favorites-btn.added:hover {
+  background-color: #8b0000;
+}

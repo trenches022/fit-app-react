@@ -1,0 +1,24 @@
+.navbar {
+  position: relative;
+  top: 148px;
+  width: 115%;
+  background-color: #161616;
+  padding: 10px 0;
+  border-radius: 0 0 12px 12px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: #0f6b2b;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #13a037;
+}

@@ -1,0 +1,54 @@
+.start-page {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+}
+
+.start-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.start-inputs input, .start-inputs select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #222;
+  color: #ddd;
+  font-size: 16px;
+}
+
+.start-inputs select {
+  cursor: pointer;
+}
+
+.start-inputs input:focus, .start-inputs select:focus {
+  outline: 2px solid #0f6b2b;
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #0f6b2b;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 30px;
+}
+
+.generate-btn:hover {
+  background-color: #0b4d1f;
+}
+
+h2{
+  text-align: center;
+}
