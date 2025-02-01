@@ -4,6 +4,7 @@ A web application built with React.js that helps users generate a personalized m
 
 ![Fit App Screenshot](https://raw.githubusercontent.com/trenches022/fit-app-react/main/fit-app-screenshot.png)
 ![Fit App Screenshot](https://raw.githubusercontent.com/trenches022/fit-app-react/main/fit-app-screenshot1.png)
+![Fit App Screenshot](https://raw.githubusercontent.com/trenches022/fit-app-react/main/fit-app-screenshot2.png)
 
 #  Key Features
 
@@ -40,5 +41,3 @@ A web application built with React.js that helps users generate a personalized m
 * Recipes matching the criteria are displayed dynamically in a responsive grid.
 
 * Users can explore different meal options and refine their choices based on their needs.
-
-# Favorites tab in progress...
