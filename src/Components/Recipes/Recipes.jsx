@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import './Recipes.css';
 
-const API_KEY = '525c394bc2c1468f91b647e5822a35c4';
+const API_KEY = '42dda418b8f0410ba628f89cdb9aed79';
 
-const Recipes = ({ userPreferences }) => {
+const Recipes = ({ userPreferences, favorites, setFavorites }) => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -56,6 +56,12 @@ const Recipes = ({ userPreferences }) => {
     fetchRecipes();
   }, [userPreferences]);
 
+  const handleAddToFavorites = (recipe) => {
+    if (!favorites.some((fav) => fav.id === recipe.id)) {
+      setFavorites([...favorites, recipe]);
+    }
+  };
+
   return (
     <div className="recipes-container">
       <h2>Wybrane dla ciebie przepisy <i className="fa-solid fa-pizza-slice" style={{color: '#ff8000'}}></i></h2>
@@ -66,7 +72,7 @@ const Recipes = ({ userPreferences }) => {
               <h5>{recipe.title}</h5>
               <p className="recipe-calories">Kalorie posiłku: {recipe.calories}</p>
               <img src={recipe.image} alt={recipe.title} className="recipe-img" />
-              <button className='favorites-btn'>
+              <button className='favorites-btn' onClick={() => handleAddToFavorites(recipe)}>
                 Dodaj do ulubionych
               </button>
             </div>

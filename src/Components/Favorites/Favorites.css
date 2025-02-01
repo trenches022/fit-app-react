@@ -1,6 +1,6 @@
-.favorites-btn {
+.remove-btn{
   width: 50%;
-  padding: 5px;
+  padding: 5px 10px;
   background-color: #0f6b2b;
   border: none;
   color: white;
@@ -12,14 +12,6 @@
   margin-top: 10px;
 }
 
-.favorites-btn:hover {
+.remove-btn:hover{
   background-color: #0b4d1f;
-}
-
-.favorites-btn.added {
-  background-color: #b22222;
-}
-
-.favorites-btn.added:hover {
-  background-color: #8b0000;
 }
