@@ -3,7 +3,7 @@
 A web application built with React.js that helps users generate a personalized meal plan for a week based on their dietary preferences, calorie intake, and budget.
 
 ![Fit App Screenshot](https://raw.githubusercontent.com/trenches022/fit-app-react/main/fit-app-screenshot.png)
-![Fit App Screenshot](https://raw.githubusercontent.com/trenches022/fit-app-react/main/fit-app-screenshot2.png)
+![Fit App Screenshot](https://raw.githubusercontent.com/trenches022/fit-app-react/main/fit-app-screenshot1.png)
 
 #  Key Features
 
