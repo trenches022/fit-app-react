@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import './Recipes.css';
 
-const API_KEY = '42dda418b8f0410ba628f89cdb9aed79';
+const API_KEY = '**********************';
 
 const Recipes = ({ userPreferences, favorites, setFavorites }) => {
   const [recipes, setRecipes] = useState([]);
