@@ -49,3 +49,8 @@
 .favorites-btn:hover{
   background-color: #0b4d1f;
 }
+
+.recipe-calories{
+  color: #0ba037;
+  font-weight: bold;
+}

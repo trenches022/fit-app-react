@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import './Recipes.css';
 
-const API_KEY = '*************************';
+const API_KEY = '525c394bc2c1468f91b647e5822a35c4';
 
 const Recipes = ({ userPreferences }) => {
   const [recipes, setRecipes] = useState([]);
@@ -26,10 +26,26 @@ const Recipes = ({ userPreferences }) => {
         const data = await response.json();
         
         if (!data.results) {
-          throw new Error("No recipes found");
+          throw new Error("Nie znaleziono przepisów");
         }
-    
-        setRecipes(data.results);
+
+        const recipesWithCalories = await Promise.all(
+          data.results.map(async (recipe) => {
+            const nutritionResponse = await fetch(
+              `https://api.spoonacular.com/recipes/${recipe.id}/nutritionWidget.json?apiKey=${API_KEY}`
+            );
+
+            if (!nutritionResponse.ok) {
+              return { ...recipe, calories: "Brak danych" };
+            }
+
+            const nutritionData = await nutritionResponse.json();
+            return { ...recipe, calories: nutritionData.calories || "Brak danych" };
+          })
+        );
+
+        setRecipes(recipesWithCalories);
+
       } catch (error) {
         console.error('Błąd przy ładowaniu przepisów:', error);
         setRecipes([]);
@@ -48,6 +64,7 @@ const Recipes = ({ userPreferences }) => {
           {recipes.map((recipe) => (
             <div key={recipe.id} className="generated-recipe">
               <h5>{recipe.title}</h5>
+              <p className="recipe-calories">Kalorie posiłku: {recipe.calories}</p>
               <img src={recipe.image} alt={recipe.title} className="recipe-img" />
               <button className='favorites-btn'>
                 Dodaj do ulubionych
