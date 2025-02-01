@@ -29,7 +29,7 @@ A web application built with React.js that helps users generate a personalized m
 
 <a href="https://vitejs.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="23" height="23" alt="Vite" /></a> Vite
 
-Spoonacular API
+<a href="https://spoonacular.com/food-api" target="_blank" rel="noreferrer"><img src="https://spoonacular.com/application/frontend/images/logo-simple-framed-green-gradient.svg" width="23" height="23" alt="Spoonacular" /></a> Spoonacular API
 
 # How It Works:
 
